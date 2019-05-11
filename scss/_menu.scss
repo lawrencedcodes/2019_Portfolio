@@ -8,6 +8,7 @@
 
     .fa-bars {
         @include easeOut;
+        color: $gray;
     }
 
     &.close {
@@ -100,4 +101,59 @@
     .nav-item:nth-child(#{$x}) {
         transition-delay: $x * .1s;
     }
+}
+
+// BEGIN ABOUT PAGE
+.bio-image {
+    width: 200px;
+}
+#about {
+    color: $gray;
+}
+
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+     'bioimage bio bio'
+     'job1 job2 job3';
+     grid-template-columns: repeat(3,1fr);
+}
+.bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid $blue;
+}
+.bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+}
+.job {
+    background: lighten($dark,5);
+    padding: .5rem;
+    border-bottom: 3px solid $blue;
+}
+.job-1 {
+    grid-area: job1;
+}
+.job-2 {
+    grid-area: job2;
+}
+.job-3 {
+    grid-area: job3;
+}
+.text-link {
+    color: $pink;
+}
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    color: $gray;
+    background: darken($dark,5);
+    height: 50px;
+    position: relative;
+    width: 100%;
+    left: 0;
+    bottom: 0;
 }

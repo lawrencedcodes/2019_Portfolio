@@ -2,7 +2,6 @@ $dark: #0E0B16;
 $pink: #A239CA;
 $blue: #4717F6;
 $gray: #E7DFDD;
-$primary-color: #444;
 $bright-yellow: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/code_connector.jpg);
@@ -29,6 +28,7 @@ $background-opacity: .9;
         }
     }
 }
+
 @mixin mediaSm {
     @media screen and (max-width:500px) {
         @content;
