@@ -39,9 +39,11 @@ a {
 }
 
 header {
-   
     z-index: 2;
     width: 100%;
+    h2 {
+        color: $gray;
+    }
 }
 
 .hidden {
@@ -74,4 +76,45 @@ main {
         margin-top: 20vh;
     }
 }
+
+//BEGIN PROJECTS PAGE
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: .7rem;
+    img {
+        width: 100%;
+        border: 2px solid $gray;
+        &:hover {
+            opacity:.5;
+            border-color:$blue;
+            @include easeOut;
+        }
+    }
+}
+
+//BUTTONS HERE
+.btn {
+    display: inline;
+    width: 50%;
+    text-align: center;
+    padding: .5rem 1rem;
+    border: 0;
+    margin-bottom: .3rem;
+    &:hover {
+        background: $pink;
+        color: $gray;
+    }
+}
+.btn-dark {
+    @extend .btn;
+    background: darken($dark,50);
+    float: right;
+}
+.btn-light {
+    @extend .btn;
+    background: lighten($dark,50);
+    float:left;
+}
+
 @import 'mobile';
