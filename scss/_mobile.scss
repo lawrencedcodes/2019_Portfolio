@@ -5,7 +5,9 @@
 
 //DESKTOP/LAPTOP
 @include mediaLg {
-    
+    main#contact {
+        margin-left: 8vh;
+    }
 }
 
 //TABLETS/SMALL LAPTOP
@@ -48,6 +50,11 @@
     .projects {
         grid-template-columns: repeat(2, 1fr)
     }
+    main#contact {
+        margin-left: 0;
+        padding-left: 1rem;
+        width: 100%;
+    }
 }
 
 //PHONES
@@ -57,5 +64,20 @@
     }
     .projects {
         grid-template-columns: 1fr;
+    }
+    main#contact {
+        width: 100%;
+        margin-left: 0;
+        padding-left: .5rem;
+        .lg-heading {
+            font-size: 3rem;
+        }
+        .sm-heading {
+            margin-left: 0;
+            padding-left: .5rem;
+        }
+        .box {
+            font-size: 1.75rem;
+        }
     }
 }

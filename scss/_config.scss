@@ -7,6 +7,12 @@ $show-home-image: true;
 $home-image: url(../img/code_connector.jpg);
 $background-opacity: .9;
 
+.text-secondary {
+    color: $pink;
+}
+.contact-text {
+    color: $gray;
+}
 @mixin easeOut {
     transition: all .4s ease-in-out;
 }
@@ -35,7 +41,7 @@ $background-opacity: .9;
     }
 }
 @mixin mediaMd {
-    @media screen and (max-width:768px) {
+    @media screen and (min-width:501px) and (max-width:768px) {
         @content;
     }
 }
